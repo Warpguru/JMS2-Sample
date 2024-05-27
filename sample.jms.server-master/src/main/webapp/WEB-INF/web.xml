@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-app_3_0.xsd"
+	id="WebApp_ID">
+
+	<display-name>JMSSample</display-name>
+
+	<!-- SERVLET DEFINITIONS -->
+	<servlet id="Help">
+		<servlet-name>JMS Sample Help Servlet</servlet-name>
+		<display-name>JMS Sample Help Servlet</display-name>
+		<servlet-class>wasdev.sample.jms.web.JMSSampleHelp</servlet-class>
+		<load-on-startup></load-on-startup>
+	</servlet>
+
+	<servlet id="Point2Point">
+		<servlet-name>JMS Sample P2P Servlet</servlet-name>
+		<display-name>JMS Sample P2P Servlet</display-name>
+		<servlet-class>wasdev.sample.jms.web.JMSSampleP2P</servlet-class>
+		<load-on-startup></load-on-startup>
+	</servlet>
+
+	<servlet id="PubSub">
+		<servlet-name>JMS Sample Pub Sub Servlet</servlet-name>
+		<display-name>JMS Sample Pub Sub Servlet</display-name>
+		<servlet-class>wasdev.sample.jms.web.JMSSamplePubSub</servlet-class>
+		<load-on-startup></load-on-startup>
+	</servlet>
+
+	<!-- SERVLET MAPPINGS -->
+	<servlet-mapping id="ServletMapping_Default">
+		<servlet-name>JMS Sample Help Servlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
